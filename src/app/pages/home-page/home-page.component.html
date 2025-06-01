@@ -1,0 +1,54 @@
+<h1>This is Home Page</h1>
+<div class="main-content">
+    <div class="filter-bar">
+        <label>Tag Filter</label>
+        <select [(ngModel)]="selectedValue" (change)="applyFilter()">
+            <option *ngFor="let option of filterList" [value]="option">
+                {{option}}
+            </option>
+        </select>
+    </div>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Last Price</th>
+                <th>Tag</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of dataList">
+                <td><span class='link-like' (click)="showDetails(item.symbol)">{{item.symbol}}</span></td>
+                <td>{{item.lastPrice}}</td>
+                <td>{{item.tag}}</td>
+                <td class='delete-icon'>
+                    <span (click)="removeStock(item.symbol)">X</span>
+                </td>
+            </tr>
+            <tr *ngIf="dataList.length == 0">
+                <td [attr.colspan]="4">
+                    No Data Available
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-container *ngIf="stockDetails">
+        <div class="detail-section">
+            <h4>Stock Detail</h4>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Symbol: {{stockDetails.symbol}}</td>
+                        <td>Name: {{stockDetails.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Market Cap: {{stockDetails.marketCap}}</td>
+                        <td>Tag: {{stockDetails.tag}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </ng-container>
+</div>
