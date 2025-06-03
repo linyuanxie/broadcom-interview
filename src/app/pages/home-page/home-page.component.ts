@@ -62,9 +62,7 @@ export class HomePageComponent implements OnInit {
     // Or if data is large and we do not want to re-render the whole table then we can just filter out the deleted stock from dataList after deletion is done
     this.apiService.removeStock(symbol).subscribe({
       next: () => {
-        // this.initalData(); // Uncomment this line if you want to re-fetch the data from API after deletion
-
-        //For page performance, we are not re-fetching the data from API after deletion.
+        //For page performance,if data is huge, we are not re-fetching the data from API after deletion is successful.
         this.dataList = this.dataList.filter(v => v.symbol != symbol) // Filter out the deleted stock from display dataList table
         this.orignalList = this.orignalList.filter(v => v.symbol != symbol) // Filter out the deleted stock from orignalList
        // If filtered stocks are all deleted then reset filter to all and remove the tag from filter list
