@@ -67,6 +67,7 @@ export class HomePageComponent implements OnInit {
         //For page performance, we are not re-fetching the data from API after deletion.
         this.dataList = this.dataList.filter(v => v.symbol != symbol) // Filter out the deleted stock from display dataList table
         this.orignalList = this.orignalList.filter(v => v.symbol != symbol) // Filter out the deleted stock from orignalList
+       // If filtered stocks are all deleted then reset filter to all and remove the tag from filter list
         if(this.dataList.length ==0) {
           this.dataList = this.orignalList;
           this.initalFilterList()
