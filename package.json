@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:Alex-project": "node dist/alex-project/server/server.mjs"
+    "serve:ssr:Alex-project": "node dist/alex-project/server/server.mjs",
+    "start:mock": "node src/mock-server/index.js"
   },
   "private": true,
   "dependencies": {

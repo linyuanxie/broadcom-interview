@@ -27,7 +27,7 @@
                     <span (click)="removeStock(item.symbol)">X</span>
                 </td>
             </tr>
-            <tr *ngIf="dataList.length == 0">
+            <tr *ngIf="dataList?.length == 0">
                 <td [attr.colspan]="4">
                     No Data Available
                 </td>

@@ -33,7 +33,6 @@ export class HomePageComponent implements OnInit {
       error: (e) => {
         console.log(e)
         //handle error here
-        alert('Unexpected Server Error, Please try later');
       }
     })
   };
@@ -45,20 +44,25 @@ export class HomePageComponent implements OnInit {
 
   showDetails(symbol: string) {
     this.stockDetails = this.orignalList.find(v => v.symbol == symbol);
-    console.log(this.stockDetails);
+  }
+
+  resetDetails(symbol: string) {
+    if (this.stockDetails?.symbol === symbol) this.stockDetails = null; // reset stock details if deleted stock is displayed
   }
 
   removeStock(symbol: string) {
     // Remove from UI, in real case it will call api then re-render the table and filter list
-    this.dataList = this.dataList.filter(v => v.symbol != symbol);
-    this.orignalList = this.orignalList.filter(v => v.symbol != symbol);
+    /* this.dataList = this.dataList.filter(v => v.symbol != symbol);
+    this.orignalList = this.orignalList.filter(v => v.symbol != symbol); */
 
     //Call Remove API by pass symbol as parameter (it could be stock id if provide)
     // once deletion is done; call initalData function to re-render the stock table and filter list
-    /*  this.apiService.removeStock(symbol).subscribe({
-       next: (res) => this.initalData(),
-       error: (e) => console.log(e)
-     }) */
-
+    this.apiService.removeStock(symbol).subscribe({
+      next: () => {
+        this.initalData();
+        this.resetDetails(symbol);
+      },
+      error: (e) => console.log(e)
+    })
   }
 }
