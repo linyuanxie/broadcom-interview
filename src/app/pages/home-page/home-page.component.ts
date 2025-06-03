@@ -26,9 +26,7 @@ export class HomePageComponent implements OnInit {
       next: (data) => {
         this.dataList = data.sort((a, b) => a.symbol.localeCompare(b.symbol)); // sort initally by symbol value
         this.orignalList = [...this.dataList]; //Make the copy of dataList
-        this.filterList.clear();// Clear the filter list
-        this.filterList.add('All');// Add All as first option for filter list
-        this.orignalList.forEach(v => this.filterList.add(v.tag));// add tag value to the filter list with each value is unique
+        this.initalFilterList()
       },
       error: (e) => {
         console.log(e)
@@ -37,6 +35,11 @@ export class HomePageComponent implements OnInit {
     })
   };
 
+  initalFilterList() {
+    this.filterList.clear();// Clear the filter list
+    this.filterList.add('All');// Add All as first option for filter list
+    this.orignalList.forEach(v => this.filterList.add(v.tag));// add tag value to the filter list with each value is unique 
+  }
   applyFilter() {
     if (this.selectedValue == 'All') this.dataList = this.orignalList; // reset table data to orignal full list
     else this.dataList = this.orignalList.filter(v => v.tag == this.selectedValue);// filter out the table th tag value
@@ -51,15 +54,19 @@ export class HomePageComponent implements OnInit {
   }
 
   removeStock(symbol: string) {
-    // Remove from UI, in real case it will call api then re-render the table and filter list
-    /* this.dataList = this.dataList.filter(v => v.symbol != symbol);
-    this.orignalList = this.orignalList.filter(v => v.symbol != symbol); */
-
+    
     //Call Remove API by pass symbol as parameter (it could be stock id if provide)
     // once deletion is done; call initalData function to re-render the stock table and filter list
+    // Or if data is large and we do not want to re-render the whole table then we can just filter out the deleted stock from dataList after deletion is done
     this.apiService.removeStock(symbol).subscribe({
       next: () => {
-        this.initalData();
+        // this.initalData(); // Uncomment this line if you want to re-fetch the data from API after deletion
+
+        //For page performance, we are not re-fetching the data from API after deletion.
+        this.dataList = this.dataList.filter(v => v.symbol != symbol) // Filter out the deleted stock from dataList table
+        this.orignalList = this.orignalList.filter(v => v.symbol != symbol) // Filter out the deleted stock from orignalList
+        this.initalFilterList(); // Re-initialize the filter list to remove the deleted stock tag from the filter options
+
         this.resetDetails(symbol);
       },
       error: (e) => console.log(e)
