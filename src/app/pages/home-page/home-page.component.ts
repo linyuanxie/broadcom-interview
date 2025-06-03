@@ -39,6 +39,8 @@ export class HomePageComponent implements OnInit {
     this.filterList.clear();// Clear the filter list
     this.filterList.add('All');// Add All as first option for filter list
     this.orignalList.forEach(v => this.filterList.add(v.tag));// add tag value to the filter list with each value is unique 
+   
+    this.selectedValue = 'All'; // reset selected value to All
   }
   applyFilter() {
     if (this.selectedValue == 'All') this.dataList = this.orignalList; // reset table data to orignal full list
@@ -63,10 +65,12 @@ export class HomePageComponent implements OnInit {
         // this.initalData(); // Uncomment this line if you want to re-fetch the data from API after deletion
 
         //For page performance, we are not re-fetching the data from API after deletion.
-        this.dataList = this.dataList.filter(v => v.symbol != symbol) // Filter out the deleted stock from dataList table
+        this.dataList = this.dataList.filter(v => v.symbol != symbol) // Filter out the deleted stock from display dataList table
         this.orignalList = this.orignalList.filter(v => v.symbol != symbol) // Filter out the deleted stock from orignalList
-        this.initalFilterList(); // Re-initialize the filter list to remove the deleted stock tag from the filter options
-
+        if(this.dataList.length ==0) {
+          this.dataList = this.orignalList;
+          this.initalFilterList()
+        }
         this.resetDetails(symbol);
       },
       error: (e) => console.log(e)
