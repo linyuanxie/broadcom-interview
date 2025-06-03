@@ -68,8 +68,8 @@ export class HomePageComponent implements OnInit {
        // If filtered stocks are all deleted then reset filter to all and remove the tag from filter list
         if(this.dataList.length ==0) {
           this.dataList = this.orignalList;
-          this.initalFilterList()
         }
+        this.initalFilterList()
         this.resetDetails(symbol);
       },
       error: (e) => console.log(e)
