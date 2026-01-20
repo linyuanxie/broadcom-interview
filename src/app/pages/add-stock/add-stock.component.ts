@@ -45,10 +45,10 @@ export class AddStockComponent {
       };
 
       this.apiService.addStock(newStock).subscribe({
-        next: (value: any) => {
+        next: value => {
           this.dialogRef.close(value);
         },
-        error: (e: any) => {
+        error: e => {
           if (e.status === 400) {
             // Handle specific 400 error if needed
             this.duplicateSymbol = true;
