@@ -28,6 +28,33 @@ router.get('/stocklist', (req, res) => {
     });
 });
 
+router.post('/stock', (req, res) => {
+   const newStock = req.body;
+    getStocks((err, stocks) => {
+        if (err) {
+            console.error('Error reading stocks.json:', err);
+            return res.status(500).json({ error: 'Failed to read stocks data' });
+        }
+
+        const exists = stocks.some(stock => stock.symbol === newStock.symbol);
+        if (exists) {
+            return res.status(400).json({ error: 'Stock with this symbol already exists' });
+        }
+        // Add the new stock to the existing stocks
+        stocks.push(newStock);
+
+        // Write the updated stocks array back to stocks.json
+        const stocksPath = path.join(__dirname, 'stocks.json');
+        fs.writeFile(stocksPath, JSON.stringify(stocks, null, 2), (err) => {
+            if (err) {
+                console.error('Error adding new stock:', err);
+                return res.status(500).json({ error: 'Failed to add new stock' });
+            }
+            res.status(200).json(newStock); // Respond with the newly added stock
+        });
+    });
+    });
+
 router.delete('/stock/:symbol', (req, res) => {
     const { symbol } = req.params;
     getStocks((err, stocks) => {

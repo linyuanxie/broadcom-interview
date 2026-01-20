@@ -4,11 +4,16 @@
         <label>Tag Filter</label>
         <select [(ngModel)]="selectedValue" (change)="applyFilter()">
             <option *ngFor="let option of filterList" [value]="option">
-                {{option}}
+                {{option | capitalizeFirst}}
             </option>
         </select>
     </div>
 
+    <div class="add-stock-button-container">
+        <button (click)="openAddStockDialog()" class="add-stock-button" matTooltip="Add New Stock" matTooltipPosition="above" mat-fab color="primary" aria-label="Add New Stock">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
     <table class="data-table">
         <thead>
             <tr>
@@ -21,13 +26,13 @@
         <tbody>
             <tr *ngFor="let item of dataList">
                 <td><span class='link-like' (click)="showDetails(item.symbol)">{{item.symbol}}</span></td>
-                <td>{{item.lastPrice}}</td>
-                <td>{{item.tag}}</td>
+                <td>{{item.lastPrice | currency : 'USD' : 'symbol'}}</td>
+                <td>{{item.tag | capitalizeFirst}}</td>
                 <td class='delete-icon'>
-                    <span (click)="removeStock(item.symbol)">X</span>
+                    <mat-icon (click)="removeStock(item.symbol)" matTooltip="Delete Stock" matTooltipPosition="above">delete</mat-icon>
                 </td>
             </tr>
-            <tr *ngIf="dataList?.length == 0">
+            <tr *ngIf="!dataList || dataList.length == 0">
                 <td [attr.colspan]="4">
                     No Data Available
                 </td>
@@ -45,7 +50,7 @@
                     </tr>
                     <tr>
                         <td>Market Cap: {{stockDetails.marketCap}}</td>
-                        <td>Tag: {{stockDetails.tag}}</td>
+                        <td>Tag: {{stockDetails.tag | capitalizeFirst}}</td>
                     </tr>
                 </tbody>
             </table>

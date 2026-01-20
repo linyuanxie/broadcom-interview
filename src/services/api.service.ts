@@ -14,4 +14,9 @@ export class ApiService {
   removeStock(stockSymbol: string) {
     return this.https.delete(`api/stock/${stockSymbol}`);
   }
+
+  addStock(newStock: testDataInterface) {
+    return this.https.post('api/stock', newStock);
+  }
+
 }

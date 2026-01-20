@@ -1,0 +1,58 @@
+<div mat-dialog-content>
+    <h2>Add Stock</h2>
+    <form [formGroup]="addStockForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Stock Symbol</mat-label>
+            <input matInput formControlName="symbol" required>
+            <mat-error *ngIf="addStockForm.get('symbol')?.hasError('required')">
+                Stock Symbol is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="stockName" required>
+            <mat-error *ngIf="addStockForm.get('stockName')?.hasError('required')">
+                Stock Name is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Tag</mat-label>
+            <input matInput formControlName="tag" required>
+            <mat-error *ngIf="addStockForm.get('tag')?.hasError('required')">
+                Stock Tag is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Price</mat-label>
+            <input matInput formControlName="price" required>
+            <mat-error *ngIf="addStockForm.get('price')?.hasError('required')">
+                Price is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="addStockForm.get('price')?.hasError('pattern')">
+                Price value must be a <strong>number</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Market Cap</mat-label>
+            <input matInput formControlName="marketCap" required>
+            <mat-error *ngIf="addStockForm.get('marketCap')?.hasError('required')">
+                Market Cap is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="addStockForm.get('marketCap')?.hasError('pattern')">
+                Market Cap value must be a <strong>number</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <div mat-dialog-actions>
+            <button mat-raised-button color="primary" type="submit" [disabled]="addStockForm.invalid">Add Stock</button>
+            <button mat-raised-button color="warn" type="button" [mat-dialog-close]>Cancel</button>
+            <mat-error *ngIf="duplicateSymbol">
+                Stock Symbol already exists. Please use a different symbol.
+            </mat-error>
+        </div>
+    </form>
+</div>

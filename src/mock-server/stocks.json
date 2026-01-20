@@ -1,1 +1,611 @@
-[]
+[
+  {
+    "symbol": "MSFT",
+    "lastPrice": 370.21,
+    "tag": "watching",
+    "marketCap": "2.75T",
+    "name": "Microsoft"
+  },
+  {
+    "symbol": "GOOGL",
+    "lastPrice": 138.56,
+    "tag": "forFriends",
+    "marketCap": "1.74T",
+    "name": "Alphabet"
+  },
+  {
+    "symbol": "NVDA",
+    "lastPrice": 485.09,
+    "tag": "watching",
+    "marketCap": "1.20T",
+    "name": "NVIDIA"
+  },
+  {
+    "symbol": "TSLA",
+    "lastPrice": 235.45,
+    "tag": "forFriends",
+    "marketCap": "750.2B",
+    "name": "Tesla"
+  },
+  {
+    "symbol": "META",
+    "lastPrice": 330.12,
+    "tag": "watching",
+    "marketCap": "850.5B",
+    "name": "Meta"
+  },
+  {
+    "symbol": "BRK.B",
+    "lastPrice": 360.5,
+    "tag": "favorite",
+    "marketCap": "780.1B",
+    "name": "Berkshire Hathaway"
+  },
+  {
+    "symbol": "LLY",
+    "lastPrice": 590.34,
+    "tag": "watching",
+    "marketCap": "560.8B",
+    "name": "Eli Lilly"
+  },
+  {
+    "symbol": "TSM",
+    "lastPrice": 98.45,
+    "tag": "forFriends",
+    "marketCap": "510.3B",
+    "name": "TSMC"
+  },
+  {
+    "symbol": "UNH",
+    "lastPrice": 540.12,
+    "tag": "favorite",
+    "marketCap": "500.2B",
+    "name": "UnitedHealth"
+  },
+  {
+    "symbol": "V",
+    "lastPrice": 255.67,
+    "tag": "watching",
+    "marketCap": "480.5B",
+    "name": "Visa"
+  },
+  {
+    "symbol": "NVO",
+    "lastPrice": 102.34,
+    "tag": "forFriends",
+    "marketCap": "460.1B",
+    "name": "Novo Nordisk"
+  },
+  {
+    "symbol": "JPM",
+    "lastPrice": 155.89,
+    "tag": "favorite",
+    "marketCap": "450.6B",
+    "name": "JPMorgan Chase"
+  },
+  {
+    "symbol": "WMT",
+    "lastPrice": 158.23,
+    "tag": "watching",
+    "marketCap": "425.3B",
+    "name": "Walmart"
+  },
+  {
+    "symbol": "MA",
+    "lastPrice": 410.56,
+    "tag": "forFriends",
+    "marketCap": "390.8B",
+    "name": "Mastercard"
+  },
+  {
+    "symbol": "XOM",
+    "lastPrice": 105.45,
+    "tag": "favorite",
+    "marketCap": "415.2B",
+    "name": "Exxon Mobil"
+  },
+  {
+    "symbol": "JNJ",
+    "lastPrice": 150.34,
+    "tag": "watching",
+    "marketCap": "360.5B",
+    "name": "Johnson & Johnson"
+  },
+  {
+    "symbol": "AVGO",
+    "lastPrice": 950.12,
+    "tag": "favorite",
+    "marketCap": "440.7B",
+    "name": "Broadcom"
+  },
+  {
+    "symbol": "PG",
+    "lastPrice": 148.56,
+    "tag": "forFriends",
+    "marketCap": "350.1B",
+    "name": "Procter & Gamble"
+  },
+  {
+    "symbol": "HD",
+    "lastPrice": 310.23,
+    "tag": "watching",
+    "marketCap": "310.4B",
+    "name": "Home Depot"
+  },
+  {
+    "symbol": "SSNLF",
+    "lastPrice": 50.45,
+    "tag": "forFriends",
+    "marketCap": "300.2B",
+    "name": "Samsung"
+  },
+  {
+    "symbol": "MRK",
+    "lastPrice": 102.67,
+    "tag": "favorite",
+    "marketCap": "260.8B",
+    "name": "Merck"
+  },
+  {
+    "symbol": "COST",
+    "lastPrice": 580.34,
+    "tag": "watching",
+    "marketCap": "258.5B",
+    "name": "Costco"
+  },
+  {
+    "symbol": "CVX",
+    "lastPrice": 145.67,
+    "tag": "favorite",
+    "marketCap": "275.6B",
+    "name": "Chevron"
+  },
+  {
+    "symbol": "TM",
+    "lastPrice": 185.23,
+    "tag": "forFriends",
+    "marketCap": "250.1B",
+    "name": "Toyota"
+  },
+  {
+    "symbol": "ASML",
+    "lastPrice": 720.56,
+    "tag": "favorite",
+    "marketCap": "285.4B",
+    "name": "ASML"
+  },
+  {
+    "symbol": "KO",
+    "lastPrice": 58.34,
+    "tag": "watching",
+    "marketCap": "252.8B",
+    "name": "Coca-Cola"
+  },
+  {
+    "symbol": "PEP",
+    "lastPrice": 168.12,
+    "tag": "forFriends",
+    "marketCap": "230.5B",
+    "name": "PepsiCo"
+  },
+  {
+    "symbol": "BAC",
+    "lastPrice": 30.45,
+    "tag": "favorite",
+    "marketCap": "240.2B",
+    "name": "Bank of America"
+  },
+  {
+    "symbol": "NVS",
+    "lastPrice": 95.67,
+    "tag": "watching",
+    "marketCap": "210.3B",
+    "name": "Novartis"
+  },
+  {
+    "symbol": "RHHBY",
+    "lastPrice": 35.23,
+    "tag": "forFriends",
+    "marketCap": "225.6B",
+    "name": "Roche"
+  },
+  {
+    "symbol": "ORCL",
+    "lastPrice": 115.45,
+    "tag": "favorite",
+    "marketCap": "315.8B",
+    "name": "Oracle"
+  },
+  {
+    "symbol": "AZN",
+    "lastPrice": 65.12,
+    "tag": "watching",
+    "marketCap": "202.4B",
+    "name": "AstraZeneca"
+  },
+  {
+    "symbol": "SHEL",
+    "lastPrice": 68.34,
+    "tag": "forFriends",
+    "marketCap": "215.1B",
+    "name": "Shell"
+  },
+  {
+    "symbol": "CRM",
+    "lastPrice": 260.56,
+    "tag": "favorite",
+    "marketCap": "253.7B",
+    "name": "Salesforce"
+  },
+  {
+    "symbol": "NFLX",
+    "lastPrice": 475.45,
+    "tag": "forFriends",
+    "marketCap": "210.8B",
+    "name": "Netflix"
+  },
+  {
+    "symbol": "MCD",
+    "lastPrice": 285.12,
+    "tag": "favorite",
+    "marketCap": "208.3B",
+    "name": "McDonald's"
+  },
+  {
+    "symbol": "CSCO",
+    "lastPrice": 50.67,
+    "tag": "forFriends",
+    "marketCap": "205.2B",
+    "name": "Cisco"
+  },
+  {
+    "symbol": "TMO",
+    "lastPrice": 530.45,
+    "tag": "favorite",
+    "marketCap": "200.1B",
+    "name": "Thermo Fisher Scientific"
+  },
+  {
+    "symbol": "CMCSA",
+    "lastPrice": 43.56,
+    "tag": "forFriends",
+    "marketCap": "175.8B",
+    "name": "Comcast"
+  },
+  {
+    "symbol": "INTC",
+    "lastPrice": 45.12,
+    "tag": "favorite",
+    "marketCap": "190.3B",
+    "name": "Intel"
+  },
+  {
+    "symbol": "SAP",
+    "lastPrice": 160.34,
+    "tag": "watching",
+    "marketCap": "185.6B",
+    "name": "SAP"
+  },
+  {
+    "symbol": "DIS",
+    "lastPrice": 92.45,
+    "tag": "forFriends",
+    "marketCap": "168.2B",
+    "name": "Walt Disney"
+  },
+  {
+    "symbol": "NKE",
+    "lastPrice": 108.67,
+    "tag": "favorite",
+    "marketCap": "165.4B",
+    "name": "Nike"
+  },
+  {
+    "symbol": "WFC",
+    "lastPrice": 48.23,
+    "tag": "watching",
+    "marketCap": "175.1B",
+    "name": "Wells Fargo"
+  },
+  {
+    "symbol": "DHR",
+    "lastPrice": 230.56,
+    "tag": "forFriends",
+    "marketCap": "170.8B",
+    "name": "Danaher"
+  },
+  {
+    "symbol": "VZ",
+    "lastPrice": 38.45,
+    "tag": "favorite",
+    "marketCap": "160.2B",
+    "name": "Verizon"
+  },
+  {
+    "symbol": "INTU",
+    "lastPrice": 620.12,
+    "tag": "watching",
+    "marketCap": "173.5B",
+    "name": "Intuit"
+  },
+  {
+    "symbol": "QCOM",
+    "lastPrice": 140.34,
+    "tag": "forFriends",
+    "marketCap": "156.8B",
+    "name": "Qualcomm"
+  },
+  {
+    "symbol": "IBM",
+    "lastPrice": 162.56,
+    "tag": "favorite",
+    "marketCap": "148.3B",
+    "name": "IBM"
+  },
+  {
+    "symbol": "AMGN",
+    "lastPrice": 285.23,
+    "tag": "watching",
+    "marketCap": "152.6B",
+    "name": "Amgen"
+  },
+  {
+    "symbol": "TXN",
+    "lastPrice": 165.45,
+    "tag": "forFriends",
+    "marketCap": "150.1B",
+    "name": "Texas Instruments"
+  },
+  {
+    "symbol": "MS",
+    "lastPrice": 90.12,
+    "tag": "favorite",
+    "marketCap": "145.8B",
+    "name": "Morgan Stanley"
+  },
+  {
+    "symbol": "HON",
+    "lastPrice": 200.34,
+    "tag": "watching",
+    "marketCap": "132.5B",
+    "name": "Honeywell"
+  },
+  {
+    "symbol": "UNP",
+    "lastPrice": 245.67,
+    "tag": "forFriends",
+    "marketCap": "149.2B",
+    "name": "Union Pacific"
+  },
+  {
+    "symbol": "BMY",
+    "lastPrice": 50.23,
+    "tag": "favorite",
+    "marketCap": "105.4B",
+    "name": "Bristol Myers Squibb"
+  },
+  {
+    "symbol": "UPS",
+    "lastPrice": 158.45,
+    "tag": "watching",
+    "marketCap": "135.6B",
+    "name": "United Parcel Service"
+  },
+  {
+    "symbol": "LOW",
+    "lastPrice": 220.12,
+    "tag": "forFriends",
+    "marketCap": "128.3B",
+    "name": "Lowe's"
+  },
+  {
+    "symbol": "SPGI",
+    "lastPrice": 435.56,
+    "tag": "watching",
+    "marketCap": "138.2B",
+    "name": "S&P Global"
+  },
+  {
+    "symbol": "RTX",
+    "lastPrice": 85.23,
+    "tag": "forFriends",
+    "marketCap": "124.1B",
+    "name": "Raytheon Technologies"
+  },
+  {
+    "symbol": "CAT",
+    "lastPrice": 290.12,
+    "tag": "watching",
+    "marketCap": "148.3B",
+    "name": "Caterpillar"
+  },
+  {
+    "symbol": "SONY",
+    "lastPrice": 92.34,
+    "tag": "forFriends",
+    "marketCap": "115.6B",
+    "name": "Sony"
+  },
+  {
+    "symbol": "SBUX",
+    "lastPrice": 95.67,
+    "tag": "favorite",
+    "marketCap": "108.2B",
+    "name": "Starbucks"
+  },
+  {
+    "symbol": "GS",
+    "lastPrice": 380.23,
+    "tag": "watching",
+    "marketCap": "125.4B",
+    "name": "Goldman Sachs"
+  },
+  {
+    "symbol": "DE",
+    "lastPrice": 395.45,
+    "tag": "forFriends",
+    "marketCap": "112.8B",
+    "name": "Deere"
+  },
+  {
+    "symbol": "T",
+    "lastPrice": 16.12,
+    "tag": "favorite",
+    "marketCap": "115.3B",
+    "name": "AT&T"
+  },
+  {
+    "symbol": "SIEGY",
+    "lastPrice": 90.34,
+    "tag": "watching",
+    "marketCap": "145.2B",
+    "name": "Siemens"
+  },
+  {
+    "symbol": "GE",
+    "lastPrice": 128.56,
+    "tag": "forFriends",
+    "marketCap": "140.1B",
+    "name": "General Electric"
+  },
+  {
+    "symbol": "ELV",
+    "lastPrice": 470.23,
+    "tag": "favorite",
+    "marketCap": "110.5B",
+    "name": "Elevance Health"
+  },
+  {
+    "symbol": "GILD",
+    "lastPrice": 80.45,
+    "tag": "watching",
+    "marketCap": "100.2B",
+    "name": "Gilead Sciences"
+  },
+  {
+    "symbol": "BLK",
+    "lastPrice": 790.12,
+    "tag": "forFriends",
+    "marketCap": "118.6B",
+    "name": "BlackRock"
+  },
+  {
+    "symbol": "C",
+    "lastPrice": 52.56,
+    "tag": "watching",
+    "marketCap": "100.5B",
+    "name": "Citigroup"
+  },
+  {
+    "symbol": "CVS",
+    "lastPrice": 75.23,
+    "tag": "forFriends",
+    "marketCap": "96.2B",
+    "name": "CVS Health"
+  },
+  {
+    "symbol": "TJX",
+    "lastPrice": 92.45,
+    "tag": "favorite",
+    "marketCap": "105.1B",
+    "name": "TJX Companies"
+  },
+  {
+    "symbol": "ISRG",
+    "lastPrice": 335.34,
+    "tag": "forFriends",
+    "marketCap": "118.2B",
+    "name": "Intuitive Surgical"
+  },
+  {
+    "symbol": "SYK",
+    "lastPrice": 298.56,
+    "tag": "favorite",
+    "marketCap": "113.4B",
+    "name": "Stryker"
+  },
+  {
+    "symbol": "MDLZ",
+    "lastPrice": 72.12,
+    "tag": "favorite",
+    "marketCap": "98.2B",
+    "name": "Mondelez"
+  },
+  {
+    "symbol": "BKNG",
+    "lastPrice": 3500.34,
+    "tag": "watching",
+    "marketCap": "125.6B",
+    "name": "Booking Holdings"
+  },
+  {
+    "symbol": "VRTX",
+    "lastPrice": 405.56,
+    "tag": "forFriends",
+    "marketCap": "104.3B",
+    "name": "Vertex Pharmaceuticals"
+  },
+  {
+    "symbol": "REGN",
+    "lastPrice": 880.23,
+    "tag": "favorite",
+    "marketCap": "95.1B",
+    "name": "Regeneron"
+  },
+  {
+    "symbol": "ZTS",
+    "lastPrice": 195.45,
+    "tag": "watching",
+    "marketCap": "89.6B",
+    "name": "Zoetis"
+  },
+  {
+    "symbol": "FISV",
+    "lastPrice": 132.12,
+    "tag": "forFriends",
+    "marketCap": "80.5B",
+    "name": "Fiserv"
+  },
+  {
+    "symbol": "LRCX",
+    "lastPrice": 750.34,
+    "tag": "favorite",
+    "marketCap": "100.8B",
+    "name": "Lam Research"
+  },
+  {
+    "symbol": "MU",
+    "lastPrice": 82.56,
+    "tag": "watching",
+    "marketCap": "90.2B",
+    "name": "Micron Technology"
+  },
+  {
+    "symbol": "EQIX",
+    "lastPrice": 810.23,
+    "tag": "forFriends",
+    "marketCap": "76.5B",
+    "name": "Equinix"
+  },
+  {
+    "symbol": "ITW",
+    "lastPrice": 260.45,
+    "tag": "favorite",
+    "marketCap": "78.2B",
+    "name": "Illinois Tool Works"
+  },
+  {
+    "symbol": "PANW",
+    "lastPrice": 295.12,
+    "tag": "watching",
+    "marketCap": "92.4B",
+    "name": "Palo Alto Networks"
+  },
+  {
+    "symbol": "KLAC",
+    "lastPrice": 560.34,
+    "tag": "forFriends",
+    "marketCap": "76.1B",
+    "name": "KLA"
+  }
+]

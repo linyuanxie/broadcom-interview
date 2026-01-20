@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ShareModuleModule } from '../share-module/share-module.module';
+import { ShareModule } from '../share-module/share-module.module';
 import { ModuleRoutingModule } from './app.routes';
 
 @Component({
   selector: 'app-root',
-  imports: [ModuleRoutingModule, ShareModuleModule],
+  imports: [ModuleRoutingModule, ShareModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
