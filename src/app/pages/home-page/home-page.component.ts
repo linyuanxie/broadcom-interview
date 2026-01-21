@@ -23,6 +23,11 @@ export class HomePageComponent implements OnInit {
   name = 'Angular';
   ngOnInit(): void {
     this.initalData();
+
+    //Test
+
+    
+    //Test End
   }
   initalData() {
     this.apiService.getData().subscribe({
